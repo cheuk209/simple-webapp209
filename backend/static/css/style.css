@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #d32f2f; /* Racing Red */
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/path-to-f1-car-image.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main Content */
+.container {
+    padding: 20px;
+}
+
+/* Chatbot Styles */
+#chatbot {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#chat-output {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.loader {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to ensure it's above other content */
+}
+
+.loader-text {
+    margin-top: 20px; /* Space above the text */
+    color: #333; /* Text color */
+    font-size: 1.2rem; /* Text size */
+    text-align: center; /* Center the text */
+}
+.car__body {
+    animation: shake 0.2s ease-in-out infinite alternate;
+}
+
+.car__line {
+    transform-origin: center right;
+    stroke-dasharray: 22;
+    animation: line 0.8s ease-in-out infinite;
+    animation-fill-mode: both;
+}
+
+.car__line--top {
+    animation-delay: 0s;
+}
+
+.car__line--middle {
+    animation-delay: 0.2s;
+}
+
+.car__line--bottom {
+    animation-delay: 0.4s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-1%);
+    }
+    100% {
+        transform: translateY(3%);
+    }
+}
+
+@keyframes line {
+    0% {
+        stroke-dashoffset: 22;
+    }
+    25% {
+        stroke-dashoffset: 22;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    51% {
+        stroke-dashoffset: 0;
+    }
+    80% {
+        stroke-dashoffset: -22;
+    }
+    100% {
+        stroke-dashoffset: -22;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
