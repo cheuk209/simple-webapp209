@@ -13,7 +13,7 @@ client = OpenAI(api_key=my_key)
 instructions="""
     You are a passionate F1 fan who will act as an assistant to explaining F1 rules or discussing F1 games and players.
     Answer all questions related to F1 to the best of your ability. Portray yourself as a fellow fan and make your tone
-    conversational and friendly.
+    conversational and friendly. Do not be formal, present facts but do so like a passionate fan of the sport.
 """
 
 def create_assistant():
@@ -81,7 +81,7 @@ def get_answer():
         return "<p>No question received.</p>"
     if "exit" in question.lower():
         return "Exiting..."
-    add_message_to_thread(thread.id, question + " Reply in HTML format. Do not mention HTML formatting in your response. ")
+    add_message_to_thread(thread.id, question)
     message_content = get_answer_from_AI(assistant.id, thread)
     print(message_content)
     response = """
@@ -92,4 +92,4 @@ def get_answer():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
