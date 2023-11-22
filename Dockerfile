@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM --platform=linux/amd64 python:3.8-slim
 
 WORKDIR /usr/src/
 
@@ -11,7 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Make port 80 available to the world outside this container
 EXPOSE 80
 
-RUN pip install gunicorn
 # Define environment variable
 ENV NAME dev
 
