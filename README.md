@@ -59,6 +59,7 @@ Sure, simple run `terraform destroy` and then `terraform apply` :)
 - could have easily used Gunicorn + nginx for a better production backend server
 - For real production-grade applications, we could have implemented a forward proxy-server between the app and the load balancer
 - As the focus was not on the actual application, there is no concept of different environments or CICD implemented here. Obviously testing and CICD would be tremendously important in an actual life cycle.
+- I have no domain name, so I did not use route 53. 
 
 ## time taken 
 Approximately 5-6 hours, I forgot how troublesome it is to write terraform from scratch, as most engineers will be used to reusing existing boilerplaces/templates. IAM permissions were a nightmare, had to do multiple `terraform apply` to get it right sometimes :P 
