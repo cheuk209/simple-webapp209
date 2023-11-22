@@ -1,6 +1,6 @@
 # simple-webapp209
 ## How to access the web app?
-You can choose to run locally using `make install` and `make run`, but note you won't be able to make any real requests since you would need your own OpenAI API key, which I have stored locally.
+You can choose to run locally using `make install` and `make run`, but note you **won't be able to make any real requests** since you would need your own OpenAI API key, which I have stored locally.
 
 To access it on your web browser: http://my-flask-app-alb-297038120.eu-west-1.elb.amazonaws.com/
 
